@@ -11,7 +11,7 @@ import MessageUI
 
 private enum PresentViewType: Identifiable {
     var id: PresentViewType { return self }
-    case eulaView, onboardingView, mailCompose, activityView
+    case eulaView, onboardingView, mailCompose, activityView, instructionsView
 }
 
 struct SettingsView: View {
@@ -47,6 +47,11 @@ struct SettingsView: View {
                     presentViewType = .onboardingView
                 }) {
                     SettingCell(text: "App Walkthrough", subtitle: nil, imageName: "greetingcard")
+                }
+                Button(action: {
+                    presentViewType = .instructionsView
+                }) {
+                    SettingCell(text: "How to use the app", subtitle: nil, imageName: "greetingcard")
                 }
                 Button(action: {
                     presentViewType = .eulaView
@@ -99,6 +104,8 @@ struct SettingsView: View {
             case .activityView:
                 let url = URL(string: "https://apps.apple.com/us/app/bmcamera/id1560405807")
                 ActivityView(activityItems: [url!])
+            case .instructionsView:
+                InstructionsView()
             }
         }
     }

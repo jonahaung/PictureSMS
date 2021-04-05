@@ -18,7 +18,7 @@ struct ContactPickerView: UIViewControllerRepresentable {
         let navController = UINavigationController()
         let controller = CNContactPickerViewController()
         controller.delegate = context.coordinator
-        navController.present(controller, animated: true, completion: nil)
+        navController.present(controller, animated: false)
         return navController
     }
     

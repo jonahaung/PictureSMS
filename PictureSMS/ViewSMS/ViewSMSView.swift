@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ViewSMSView: View {
+    
     class SheetCoordinator: ObservableObject {
         @Published var showActivityView = false
     }

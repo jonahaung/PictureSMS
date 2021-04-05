@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var appManager: AppManager
     
     var body: some View {
         ZStack {

@@ -6,8 +6,13 @@
 //
 
 import Foundation
-struct Contact: Hashable, Identifiable {
-    var id: String { return number }
-    var name: String
-    var number: String
+public struct Contact: Identifiable, Hashable {
+    
+    public var id: String { return number }
+    public var name: String
+    public var number: String
+    public init(name: String, number: String) {
+        self.name = name
+        self.number = number
+    }
 }

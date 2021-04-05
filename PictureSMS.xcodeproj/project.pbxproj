@@ -7,19 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		475CBD9A26178604000147C4 /* CreateSMSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBD9926178604000147C4 /* CreateSMSView.swift */; };
+		475CBD9D2617860E000147C4 /* ViewSMSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBD9C2617860E000147C4 /* ViewSMSView.swift */; };
+		475CBDA12617871C000147C4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBDA02617871C000147C4 /* SettingsView.swift */; };
+		475CBDA826178A15000147C4 /* MessageComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBDA726178A15000147C4 /* MessageComposeView.swift */; };
+		475CBDAB26178D06000147C4 /* ContactsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBDAA26178D06000147C4 /* ContactsPickerView.swift */; };
+		475D9652261A94A600AD38A6 /* UserdefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9650261A94A500AD38A6 /* UserdefaultManager.swift */; };
+		475D9653261A94A600AD38A6 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9651261A94A600AD38A6 /* SoundManager.swift */; };
+		475D9656261AB1B400AD38A6 /* DocPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9655261AB1B300AD38A6 /* DocPickerView.swift */; };
+		475D9659261AB28000AD38A6 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9658261AB28000AD38A6 /* Camera.swift */; };
+		475D965D261AB85300AD38A6 /* ImageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D965C261AB85300AD38A6 /* ImageViewer.swift */; };
+		475D9660261AB9A500AD38A6 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D965F261AB9A500AD38A6 /* ActivityView.swift */; };
+		475D9667261ABADF00AD38A6 /* onBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9663261ABADF00AD38A6 /* onBoardingPage.swift */; };
+		475D9668261ABADF00AD38A6 /* EULAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9664261ABADF00AD38A6 /* EULAView.swift */; };
+		475D9669261ABADF00AD38A6 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9665261ABADF00AD38A6 /* WelcomeView.swift */; };
+		475D966A261ABADF00AD38A6 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9666261ABADF00AD38A6 /* OnboardingView.swift */; };
+		475D966D261ABB0500AD38A6 /* MailComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D966C261ABB0500AD38A6 /* MailComposeView.swift */; };
+		475D9670261ABB2200AD38A6 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D966F261ABB2200AD38A6 /* AlertPresenter.swift */; };
+		475D9673261ABB5100AD38A6 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9672261ABB5100AD38A6 /* SettingCell.swift */; };
+		475D9676261ABB5800AD38A6 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9675261ABB5800AD38A6 /* SettingsManager.swift */; };
+		478F00BB261A248600764B46 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F00BA261A248600764B46 /* Contact.swift */; };
 		47DC4CAC261736DD0050C471 /* PictureSMSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4CAB261736DD0050C471 /* PictureSMSApp.swift */; };
 		47DC4CAE261736DD0050C471 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4CAD261736DD0050C471 /* ContentView.swift */; };
 		47DC4CB0261736DE0050C471 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47DC4CAF261736DE0050C471 /* Assets.xcassets */; };
 		47DC4CB3261736DE0050C471 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47DC4CB2261736DE0050C471 /* Preview Assets.xcassets */; };
+		47DC4CC1261739970050C471 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4CC0261739970050C471 /* ImagePicker.swift */; };
+		47DC4CC6261740F60050C471 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4CC5261740F60050C471 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		475CBD9926178604000147C4 /* CreateSMSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSMSView.swift; sourceTree = "<group>"; };
+		475CBD9C2617860E000147C4 /* ViewSMSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSMSView.swift; sourceTree = "<group>"; };
+		475CBDA02617871C000147C4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		475CBDA726178A15000147C4 /* MessageComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposeView.swift; sourceTree = "<group>"; };
+		475CBDAA26178D06000147C4 /* ContactsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPickerView.swift; sourceTree = "<group>"; };
+		475D9650261A94A500AD38A6 /* UserdefaultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserdefaultManager.swift; sourceTree = "<group>"; };
+		475D9651261A94A600AD38A6 /* SoundManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		475D9655261AB1B300AD38A6 /* DocPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocPickerView.swift; sourceTree = "<group>"; };
+		475D9658261AB28000AD38A6 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		475D965C261AB85300AD38A6 /* ImageViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewer.swift; sourceTree = "<group>"; };
+		475D965F261AB9A500AD38A6 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		475D9663261ABADF00AD38A6 /* onBoardingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onBoardingPage.swift; sourceTree = "<group>"; };
+		475D9664261ABADF00AD38A6 /* EULAView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EULAView.swift; sourceTree = "<group>"; };
+		475D9665261ABADF00AD38A6 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		475D9666261ABADF00AD38A6 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		475D966C261ABB0500AD38A6 /* MailComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailComposeView.swift; sourceTree = "<group>"; };
+		475D966F261ABB2200AD38A6 /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		475D9672261ABB5100AD38A6 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		475D9675261ABB5800AD38A6 /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		478F00BA261A248600764B46 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		47DC4CA8261736DD0050C471 /* PictureSMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureSMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DC4CAB261736DD0050C471 /* PictureSMSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureSMSApp.swift; sourceTree = "<group>"; };
 		47DC4CAD261736DD0050C471 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		47DC4CAF261736DE0050C471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47DC4CB2261736DE0050C471 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		47DC4CB4261736DE0050C471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47DC4CC0261739970050C471 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		47DC4CC5261740F60050C471 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +77,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		475CBD9F2617870F000147C4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				475D9672261ABB5100AD38A6 /* SettingCell.swift */,
+				475D9675261ABB5800AD38A6 /* SettingsManager.swift */,
+				475CBDA02617871C000147C4 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		475CBDA326178729000147C4 /* CreateSMS */ = {
+			isa = PBXGroup;
+			children = (
+				475CBD9926178604000147C4 /* CreateSMSView.swift */,
+				478F00B9261A246E00764B46 /* Models */,
+			);
+			path = CreateSMS;
+			sourceTree = "<group>";
+		};
+		475CBDA526178732000147C4 /* ViewSMS */ = {
+			isa = PBXGroup;
+			children = (
+				475CBD9C2617860E000147C4 /* ViewSMSView.swift */,
+			);
+			path = ViewSMS;
+			sourceTree = "<group>";
+		};
+		475D9662261ABADF00AD38A6 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				475D9663261ABADF00AD38A6 /* onBoardingPage.swift */,
+				475D9664261ABADF00AD38A6 /* EULAView.swift */,
+				475D9665261ABADF00AD38A6 /* WelcomeView.swift */,
+				475D9666261ABADF00AD38A6 /* OnboardingView.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		478F00B9261A246E00764B46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				478F00BA261A248600764B46 /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		47DC4C9F261736DD0050C471 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +144,12 @@
 			children = (
 				47DC4CAB261736DD0050C471 /* PictureSMSApp.swift */,
 				47DC4CAD261736DD0050C471 /* ContentView.swift */,
+				475D9662261ABADF00AD38A6 /* OnBoarding */,
+				475CBDA326178729000147C4 /* CreateSMS */,
+				475CBDA526178732000147C4 /* ViewSMS */,
+				475CBD9F2617870F000147C4 /* Settings */,
+				47DC4CC4261740E70050C471 /* Helpers */,
+				47DC4CBB2617389D0050C471 /* Pickers */,
 				47DC4CAF261736DE0050C471 /* Assets.xcassets */,
 				47DC4CB4261736DE0050C471 /* Info.plist */,
 				47DC4CB1261736DE0050C471 /* Preview Content */,
@@ -67,6 +163,32 @@
 				47DC4CB2261736DE0050C471 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		47DC4CBB2617389D0050C471 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				475D9655261AB1B300AD38A6 /* DocPickerView.swift */,
+				47DC4CC0261739970050C471 /* ImagePicker.swift */,
+				475D9658261AB28000AD38A6 /* Camera.swift */,
+				475CBDA726178A15000147C4 /* MessageComposeView.swift */,
+				475CBDAA26178D06000147C4 /* ContactsPickerView.swift */,
+				475D965F261AB9A500AD38A6 /* ActivityView.swift */,
+				475D966C261ABB0500AD38A6 /* MailComposeView.swift */,
+			);
+			path = Pickers;
+			sourceTree = "<group>";
+		};
+		47DC4CC4261740E70050C471 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				475D966F261ABB2200AD38A6 /* AlertPresenter.swift */,
+				475D965C261AB85300AD38A6 /* ImageViewer.swift */,
+				475D9651261A94A600AD38A6 /* SoundManager.swift */,
+				475D9650261A94A500AD38A6 /* UserdefaultManager.swift */,
+				47DC4CC5261740F60050C471 /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +260,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475CBDAB26178D06000147C4 /* ContactsPickerView.swift in Sources */,
+				475D9670261ABB2200AD38A6 /* AlertPresenter.swift in Sources */,
+				475CBDA12617871C000147C4 /* SettingsView.swift in Sources */,
+				478F00BB261A248600764B46 /* Contact.swift in Sources */,
+				475D965D261AB85300AD38A6 /* ImageViewer.swift in Sources */,
+				475D9652261A94A600AD38A6 /* UserdefaultManager.swift in Sources */,
+				475D9667261ABADF00AD38A6 /* onBoardingPage.swift in Sources */,
+				475D9660261AB9A500AD38A6 /* ActivityView.swift in Sources */,
+				475CBDA826178A15000147C4 /* MessageComposeView.swift in Sources */,
 				47DC4CAE261736DD0050C471 /* ContentView.swift in Sources */,
+				475D966D261ABB0500AD38A6 /* MailComposeView.swift in Sources */,
+				475D9653261A94A600AD38A6 /* SoundManager.swift in Sources */,
+				475CBD9D2617860E000147C4 /* ViewSMSView.swift in Sources */,
+				475D9673261ABB5100AD38A6 /* SettingCell.swift in Sources */,
+				47DC4CC1261739970050C471 /* ImagePicker.swift in Sources */,
+				475D9659261AB28000AD38A6 /* Camera.swift in Sources */,
+				475D966A261ABADF00AD38A6 /* OnboardingView.swift in Sources */,
+				475D9656261AB1B400AD38A6 /* DocPickerView.swift in Sources */,
 				47DC4CAC261736DD0050C471 /* PictureSMSApp.swift in Sources */,
+				475D9668261ABADF00AD38A6 /* EULAView.swift in Sources */,
+				475D9676261ABB5800AD38A6 /* SettingsManager.swift in Sources */,
+				475CBD9A26178604000147C4 /* CreateSMSView.swift in Sources */,
+				47DC4CC6261740F60050C471 /* Extensions.swift in Sources */,
+				475D9669261ABADF00AD38A6 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonahaung.PictureSMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonahaung.PictureSMS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

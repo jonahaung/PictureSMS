@@ -23,7 +23,7 @@ struct MessageComposeView: UIViewControllerRepresentable {
         let x = MFMessageComposeViewController()
         x.recipients = contacts.map{$0.number}
         x.messageComposeDelegate = context.coordinator
-        x.subject = "Picture SMS"
+        x.subject = "PhotoSMS Message"
         x.body = text
         return x
     }
@@ -44,6 +44,8 @@ struct MessageComposeView: UIViewControllerRepresentable {
             parent.onComplete(result)
             switch result {
             case .sent:
+                guard let numbers = controller.recipients?.joined(separator: ", ") else { return }
+                Message.create(text: parent.text, contacts: numbers, isSender: true)
                 parent.presentationMode.wrappedValue.dismiss()
             case .cancelled:
                 parent.presentationMode.wrappedValue.dismiss()

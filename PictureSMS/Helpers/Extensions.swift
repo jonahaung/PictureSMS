@@ -32,7 +32,22 @@ extension UIApplication {
         return base
     }
 }
-extension UIImage {
+
+extension String {
+    
+    var image: UIImage? {
+        if let imageData = Data(base64Encoded: self, options: .ignoreUnknownCharacters) {
+            return UIImage(data: imageData)
+        }
+        return nil
+    }
+}
+extension UIImage: Identifiable {
+    
+    var imageString: String? {
+        return self.jpegData(compressionQuality: 0.5)?.base64EncodedString(options: .lineLength64Characters)
+    }
+    
     func scaledWithMaxWidthOrHeightValue(value: CGFloat) -> UIImage? {
         
         let width = self.size.width

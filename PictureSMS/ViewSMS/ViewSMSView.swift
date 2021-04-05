@@ -9,21 +9,35 @@ import SwiftUI
 
 struct ViewSMSView: View {
     class SheetCoordinator: ObservableObject {
-        @Published var showImageFilterMenu = false
         @Published var showActivityView = false
-        @Published var showSaveFilteredImage = false
     }
     @StateObject private var sheetCoordinator = SheetCoordinator()
-    @State private var image: UIImage?
     @State private var text: String?
-    
+    @State private var viewingImage: UIImage?
+    @EnvironmentObject var appManager: AppManager
     var body: some View {
         VStack {
-            if let image = self.image {
+            if let image = appManager.recentImage {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFit()
-                    .pinchToZoom()
+                    .onTapGesture {
+                        viewingImage = image
+                    }
+                    .shadow(radius: 5)
+            } else {
+                Spacer()
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Instructions").underline()
+                    Text("1. Go to phone's Message application")
+                    Text("2. Reveal the contex menu of the message by long-pressing the message bubble")
+                    Text("3. Click 'Copy' and copy the entire message body")
+                    Text("4. Come back to PhotoSMS app")
+                    Text("5. Go to 'View Message'")
+                }
+                .foregroundColor(Color(.tertiaryLabel))
+                .padding()
+                
             }
             
             Spacer()
@@ -32,33 +46,36 @@ struct ViewSMSView: View {
         .navigationTitle("View Message")
         .onAppear{
             if let text = UIPasteboard.general.string {
-                image = convertBase64ToImage(imageString: text)
+                
+                if let _ = Message.existing(text: text) {
+                    
+                } else if appManager.recentImage != nil {
+                    Message.create(text: text, contacts: "Received", isSender: false)
+                }
             }
         }
+        .sheet(item: $viewingImage) { image in
+            ImageViewerView(image: image)
+        }
     }
+    
     private func bottomBar() -> some View {
         return HStack {
             Button {
-                sheetCoordinator.showActivityView = true
+                UIPasteboard.general.string = String()
+                appManager.recentImage = nil
             } label: {
-                Image(systemName: "square.and.arrow.up")
-            }
-            .sheet(isPresented: $sheetCoordinator.showActivityView) {
-                let items = [image]
-                ActivityView(activityItems: items as [Any])
+                Text("Clear")
+            }.disabled(appManager.recentImage == nil)
+
+            Spacer()
+            if let image = appManager.recentImage {
+                NavigationLink(destination: CreateSMSView(image: image)) {
+                    Text("Forward")
+                }
             }
             
-            Spacer()
-            NavigationLink(destination: CreateSMSView(image: image)) {
-                Text("Forward")
-            }
             
         }.padding()
-    }
-    private func convertBase64ToImage(imageString: String) -> UIImage? {
-        if let imageData = Data(base64Encoded: imageString, options: Data.Base64DecodingOptions.ignoreUnknownCharacters) {
-            return UIImage(data: imageData)
-        }
-        return nil
     }
 }

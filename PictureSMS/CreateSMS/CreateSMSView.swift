@@ -20,20 +20,18 @@ struct CreateSMSView: View {
     }
     @StateObject private var sheetManager = SheetManager()
     
-    @State private var imageString: String?
     @State var image: UIImage?
     @State private var sheetType: SheetType?
     @State private var contacts = [Contact]()
-    @State private var message = "Please Select An Image"
+    @State private var message: String? = "Please add an image"
     
    
     var body: some View {
         VStack {
-           
             List {
-                Section(header: HelpText, footer: EmptyView()) {
-
+                Section {
                     if let image = self.image {
+                        
                         ZStack(alignment: .bottom) {
                             Image(uiImage: image)
                                 .resizable()
@@ -53,22 +51,24 @@ struct CreateSMSView: View {
                                 }
 
                             }.padding()
-                        }.buttonStyle(PlainButtonStyle())
+                        }.buttonStyle(BorderlessButtonStyle())
                         
                         ForEach(contacts, id: \.self) { contact in
-                            HStack {
-                                Text(contact.name)
-                                    
-                                Spacer()
-                                Text(contact.number)
-                                    .foregroundColor(.secondary)
-                                    .font(.callout)
-                            }.padding(.horizontal)
-
+                            contactCell(contact)
                         }
                         .onDelete(perform: delete)
+                        
                         AddContactsButton
                     } else {
+                        VStack(alignment: .leading, spacing: 8) {
+                            Text("Instructions").underline()
+                            Text("1. Choose the image that you want to send")
+                            Text("2. Add the message recipients (You can add multiple recipients)")
+                            Text("3. Create SMS")
+                            Text("4. Send")
+                        }
+                        .foregroundColor(Color(.tertiaryLabel))
+                        .padding()
                         Button {
                             sheetManager.showImagePickerSheet = true
                         } label: {
@@ -77,13 +77,25 @@ struct CreateSMSView: View {
                         .actionSheet(isPresented: $sheetManager.showImagePickerSheet) {
                             imagePickerActionSheet
                         }
+                        
+                        
                     }
                     
                 }
                 
             }
             .listStyle(InsetGroupedListStyle())
-            SMSButton
+            if let message = self.message {
+                Text(message)
+                    .font(.callout)
+                    .foregroundColor(.secondary)
+                    .italic()
+                    .padding(5)
+                    .multilineTextAlignment(.center)
+            }
+            if image != nil && !contacts.isEmpty {
+                SMSButton
+            }
         }
         .alert(isPresented: $sheetManager.showSMSResult, content: {
             resultAlert
@@ -95,56 +107,61 @@ struct CreateSMSView: View {
             case .imagePicker:
                 ImagePicker { image in
                     self.image = image
-                    self.imageString = convertImageToBase64(image: image)
-                    self.message = "Please add the recipients"
+                    self.message = "Add the recipients.\nYou can add multiple phone numbers."
                 }
             case .documentPicker:
                 DocPickerView { image in
                     self.image = image
-                    self.imageString = convertImageToBase64(image: image)
-                    self.message = "Please add the recipients"
+                    self.message = "Add the recipients.\nYou can add multiple phone numbers."
                 }
             case .camera:
                 CameraView { image in
                     self.image = image
-                    self.imageString = convertImageToBase64(image: image)
-                    self.message = "Please add the recipients"
+                    self.message = "Add the recipients.\nYou can add multiple phone numbers."
                 }.edgesIgnoringSafeArea(.all)
         
             case .contactPicker:
                 ContactPickerView { contact in
                     if !contacts.contains(contact) {
                         contacts.append(contact)
+                        self.message = nil
                     }
                 }
             case .messageCompose:
-                if let text = self.imageString {
-                    if MFMessageComposeViewController.canSendText() {
-                        MessageComposeView(text: text, contacts: contacts) { result in
-                            
-                            switch result {
-                            case .sent:
-                                message = "Message sent"
-                               
-                            case .cancelled:
-                                message = "Message cancelled"
-                            case .failed:
-                                message = "Failed to send the message"
-                            @unknown default:
-                                print("unknown message sending result")
-                            }
+                if MFMessageComposeViewController.canSendText(), let text = image?.imageString {
+                    MessageComposeView(text: text, contacts: contacts) { result in
+                        
+                        switch result {
+                        case .sent:
+                            message = "Message sent\nPress 'Reset' button to create another message"
+                            SoundManager.vibrate(vibration: .soft)
+                        case .cancelled:
+                            message = "Message was not sent"
+                        case .failed:
+                            message = "Failed to send the message"
+                        @unknown default:
+                            print("unknown message sending result")
                         }
-                        .edgesIgnoringSafeArea(.all)
                     }
+                    .edgesIgnoringSafeArea(.all)
                 }
             }
         }
     }
-    
+    private func contactCell(_ contact: Contact) -> some View {
+        return HStack {
+            Text(contact.name)
+            Spacer()
+            Text(contact.number)
+                .foregroundColor(.secondary)
+                .font(.callout)
+        }
+        .padding(.horizontal)
+    }
     private func clear() {
         image = nil
-        imageString = nil
         contacts.removeAll()
+        message = "Please add an image"
     }
     
     private func delete(at offsets: IndexSet) {
@@ -155,7 +172,7 @@ struct CreateSMSView: View {
         return Button {
             sheetType = .contactPicker
         } label: {
-            Label("Add Recipients", systemImage: "plus.circle.fill")
+            Label("Add Message Recipients", systemImage: "plus.circle.fill")
         }
     }
     
@@ -172,18 +189,15 @@ struct CreateSMSView: View {
         }.disabled(image == nil || contacts.isEmpty)
     }
     
-    private var HelpText: some View {
-        return Text(message).font(.callout)
-            .padding()
-            .foregroundColor(.secondary)
-    }
-    
     private var ClearButton: some View {
-        return Button {
-            clear()
-        } label: {
-            Text("New SMS")
-        }.disabled(image == nil || contacts.isEmpty)
+        return HStack {
+            Button {
+                clear()
+            } label: {
+                Text("Reset")
+            }.disabled(image == nil)
+            EditButton().disabled(contacts.isEmpty)
+        }
     }
     
     private var imagePickerActionSheet: ActionSheet {
@@ -202,14 +216,8 @@ struct CreateSMSView: View {
     }
     
     private var resultAlert: Alert {
-        return Alert(title: Text(message), primaryButton: .default(Text("Create Another Picture SMS"), action: {
+        return Alert(title: Text(message ?? ""), primaryButton: .default(Text("Create Another Picture SMS"), action: {
             clear()
         }), secondaryButton: .default(Text("Done")))
-    }
-}
-
-extension CreateSMSView {
-    private func convertImageToBase64(image: UIImage) -> String?                                       {
-        return image.jpegData(compressionQuality: 0.5)?.base64EncodedString(options: .lineLength64Characters)
     }
 }

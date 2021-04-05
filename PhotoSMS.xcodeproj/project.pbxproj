@@ -26,6 +26,30 @@
 		475D9670261ABB2200AD38A6 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D966F261ABB2200AD38A6 /* AlertPresenter.swift */; };
 		475D9673261ABB5100AD38A6 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9672261ABB5100AD38A6 /* SettingCell.swift */; };
 		475D9676261ABB5800AD38A6 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9675261ABB5800AD38A6 /* SettingsManager.swift */; };
+		475D967E261AE88E00AD38A6 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D967D261AE88E00AD38A6 /* InboxView.swift */; };
+		475D9681261AE9B400AD38A6 /* InboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9680261AE9B400AD38A6 /* InboxManager.swift */; };
+		475D9685261AEA0200AD38A6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9684261AEA0200AD38A6 /* Persistence.swift */; };
+		475D9689261AEA4600AD38A6 /* PictureSMS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 475D9687261AEA4600AD38A6 /* PictureSMS.xcdatamodeld */; };
+		475D968C261AEC9400AD38A6 /* Message+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D968B261AEC9400AD38A6 /* Message+Ext.swift */; };
+		475D9691261B00DD00AD38A6 /* ImageViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9690261B00DD00AD38A6 /* ImageViewerView.swift */; };
+		475D96A7261B042800AD38A6 /* Grid+Inits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9695261B042800AD38A6 /* Grid+Inits.swift */; };
+		475D96A8261B042800AD38A6 /* StaggeredGridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9697261B042800AD38A6 /* StaggeredGridStyle.swift */; };
+		475D96A9261B042800AD38A6 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D9699261B042800AD38A6 /* Tracks.swift */; };
+		475D96AA261B042800AD38A6 /* LayoutMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D969A261B042800AD38A6 /* LayoutMath.swift */; };
+		475D96AB261B042800AD38A6 /* GridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D969C261B042800AD38A6 /* GridStyle.swift */; };
+		475D96AC261B042800AD38A6 /* GridPreferencesKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D969D261B042800AD38A6 /* GridPreferencesKey.swift */; };
+		475D96AD261B042800AD38A6 /* View+GridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D969E261B042800AD38A6 /* View+GridStyle.swift */; };
+		475D96AE261B042800AD38A6 /* GridStyleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D969F261B042800AD38A6 /* GridStyleKey.swift */; };
+		475D96AF261B042800AD38A6 /* GridPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96A0261B042800AD38A6 /* GridPreferences.swift */; };
+		475D96B0261B042800AD38A6 /* GridPreferencesModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96A1261B042800AD38A6 /* GridPreferencesModifier.swift */; };
+		475D96B1261B042800AD38A6 /* EnvironmentValues+GridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96A2261B042800AD38A6 /* EnvironmentValues+GridStyle.swift */; };
+		475D96B2261B042800AD38A6 /* GridItemBoundsPreferencesKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96A3261B042800AD38A6 /* GridItemBoundsPreferencesKey.swift */; };
+		475D96B3261B042800AD38A6 /* ModularGridStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96A4261B042800AD38A6 /* ModularGridStyle.swift */; };
+		475D96B4261B042800AD38A6 /* MyGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96A5261B042800AD38A6 /* MyGridItem.swift */; };
+		475D96B5261B042800AD38A6 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96A6261B042800AD38A6 /* Grid.swift */; };
+		475D96B8261B071100AD38A6 /* InboxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96B7261B071000AD38A6 /* InboxCell.swift */; };
+		475D96BB261B077100AD38A6 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96BA261B077100AD38A6 /* MessageItem.swift */; };
+		475D96C0261B184200AD38A6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475D96BF261B184200AD38A6 /* Launch Screen.storyboard */; };
 		478F00BB261A248600764B46 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F00BA261A248600764B46 /* Contact.swift */; };
 		47DC4CAC261736DD0050C471 /* PictureSMSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4CAB261736DD0050C471 /* PictureSMSApp.swift */; };
 		47DC4CAE261736DD0050C471 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4CAD261736DD0050C471 /* ContentView.swift */; };
@@ -55,8 +79,32 @@
 		475D966F261ABB2200AD38A6 /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		475D9672261ABB5100AD38A6 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		475D9675261ABB5800AD38A6 /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		475D967D261AE88E00AD38A6 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		475D9680261AE9B400AD38A6 /* InboxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxManager.swift; sourceTree = "<group>"; };
+		475D9684261AEA0200AD38A6 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		475D9688261AEA4600AD38A6 /* PictureSMS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PictureSMS.xcdatamodel; sourceTree = "<group>"; };
+		475D968B261AEC9400AD38A6 /* Message+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Message+Ext.swift"; sourceTree = "<group>"; };
+		475D9690261B00DD00AD38A6 /* ImageViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerView.swift; sourceTree = "<group>"; };
+		475D9695261B042800AD38A6 /* Grid+Inits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Grid+Inits.swift"; sourceTree = "<group>"; };
+		475D9697261B042800AD38A6 /* StaggeredGridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridStyle.swift; sourceTree = "<group>"; };
+		475D9699261B042800AD38A6 /* Tracks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
+		475D969A261B042800AD38A6 /* LayoutMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutMath.swift; sourceTree = "<group>"; };
+		475D969C261B042800AD38A6 /* GridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridStyle.swift; sourceTree = "<group>"; };
+		475D969D261B042800AD38A6 /* GridPreferencesKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPreferencesKey.swift; sourceTree = "<group>"; };
+		475D969E261B042800AD38A6 /* View+GridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+GridStyle.swift"; sourceTree = "<group>"; };
+		475D969F261B042800AD38A6 /* GridStyleKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridStyleKey.swift; sourceTree = "<group>"; };
+		475D96A0261B042800AD38A6 /* GridPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPreferences.swift; sourceTree = "<group>"; };
+		475D96A1261B042800AD38A6 /* GridPreferencesModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridPreferencesModifier.swift; sourceTree = "<group>"; };
+		475D96A2261B042800AD38A6 /* EnvironmentValues+GridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+GridStyle.swift"; sourceTree = "<group>"; };
+		475D96A3261B042800AD38A6 /* GridItemBoundsPreferencesKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridItemBoundsPreferencesKey.swift; sourceTree = "<group>"; };
+		475D96A4261B042800AD38A6 /* ModularGridStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridStyle.swift; sourceTree = "<group>"; };
+		475D96A5261B042800AD38A6 /* MyGridItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGridItem.swift; sourceTree = "<group>"; };
+		475D96A6261B042800AD38A6 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		475D96B7261B071000AD38A6 /* InboxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxCell.swift; sourceTree = "<group>"; };
+		475D96BA261B077100AD38A6 /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
+		475D96BF261B184200AD38A6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		478F00BA261A248600764B46 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		47DC4CA8261736DD0050C471 /* PictureSMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PictureSMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		47DC4CA8261736DD0050C471 /* PhotoSMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DC4CAB261736DD0050C471 /* PictureSMSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureSMSApp.swift; sourceTree = "<group>"; };
 		47DC4CAD261736DD0050C471 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		47DC4CAF261736DE0050C471 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +163,89 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		475D967C261AE87C00AD38A6 /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				475D967D261AE88E00AD38A6 /* InboxView.swift */,
+				475D96B7261B071000AD38A6 /* InboxCell.swift */,
+				475D96BA261B077100AD38A6 /* MessageItem.swift */,
+				475D9680261AE9B400AD38A6 /* InboxManager.swift */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		475D9683261AE9F400AD38A6 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				475D9684261AEA0200AD38A6 /* Persistence.swift */,
+				475D968B261AEC9400AD38A6 /* Message+Ext.swift */,
+				475D9687261AEA4600AD38A6 /* PictureSMS.xcdatamodeld */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		475D968F261B00B400AD38A6 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				475D9690261B00DD00AD38A6 /* ImageViewerView.swift */,
+			);
+			path = ImageViewer;
+			sourceTree = "<group>";
+		};
+		475D9693261B042800AD38A6 /* StaggeredList */ = {
+			isa = PBXGroup;
+			children = (
+				475D9694261B042800AD38A6 /* Grid */,
+			);
+			path = StaggeredList;
+			sourceTree = "<group>";
+		};
+		475D9694261B042800AD38A6 /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				475D9695261B042800AD38A6 /* Grid+Inits.swift */,
+				475D9696261B042800AD38A6 /* Styles */,
+				475D96A5261B042800AD38A6 /* MyGridItem.swift */,
+				475D96A6261B042800AD38A6 /* Grid.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		475D9696261B042800AD38A6 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				475D9697261B042800AD38A6 /* StaggeredGridStyle.swift */,
+				475D9698261B042800AD38A6 /* Layout */,
+				475D969B261B042800AD38A6 /* Style */,
+				475D96A4261B042800AD38A6 /* ModularGridStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		475D9698261B042800AD38A6 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				475D9699261B042800AD38A6 /* Tracks.swift */,
+				475D969A261B042800AD38A6 /* LayoutMath.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		475D969B261B042800AD38A6 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				475D969C261B042800AD38A6 /* GridStyle.swift */,
+				475D969D261B042800AD38A6 /* GridPreferencesKey.swift */,
+				475D969E261B042800AD38A6 /* View+GridStyle.swift */,
+				475D969F261B042800AD38A6 /* GridStyleKey.swift */,
+				475D96A0261B042800AD38A6 /* GridPreferences.swift */,
+				475D96A1261B042800AD38A6 /* GridPreferencesModifier.swift */,
+				475D96A2261B042800AD38A6 /* EnvironmentValues+GridStyle.swift */,
+				475D96A3261B042800AD38A6 /* GridItemBoundsPreferencesKey.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		478F00B9261A246E00764B46 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +265,7 @@
 		47DC4CA9261736DD0050C471 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				47DC4CA8261736DD0050C471 /* PictureSMS.app */,
+				47DC4CA8261736DD0050C471 /* PhotoSMS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +275,8 @@
 			children = (
 				47DC4CAB261736DD0050C471 /* PictureSMSApp.swift */,
 				47DC4CAD261736DD0050C471 /* ContentView.swift */,
+				475D968F261B00B400AD38A6 /* ImageViewer */,
+				475D967C261AE87C00AD38A6 /* Inbox */,
 				475D9662261ABADF00AD38A6 /* OnBoarding */,
 				475CBDA326178729000147C4 /* CreateSMS */,
 				475CBDA526178732000147C4 /* ViewSMS */,
@@ -151,7 +284,9 @@
 				47DC4CC4261740E70050C471 /* Helpers */,
 				47DC4CBB2617389D0050C471 /* Pickers */,
 				47DC4CAF261736DE0050C471 /* Assets.xcassets */,
+				475D9683261AE9F400AD38A6 /* Database */,
 				47DC4CB4261736DE0050C471 /* Info.plist */,
+				475D96BF261B184200AD38A6 /* Launch Screen.storyboard */,
 				47DC4CB1261736DE0050C471 /* Preview Content */,
 			);
 			path = PictureSMS;
@@ -182,6 +317,7 @@
 		47DC4CC4261740E70050C471 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				475D9693261B042800AD38A6 /* StaggeredList */,
 				475D966F261ABB2200AD38A6 /* AlertPresenter.swift */,
 				475D965C261AB85300AD38A6 /* ImageViewer.swift */,
 				475D9651261A94A600AD38A6 /* SoundManager.swift */,
@@ -194,9 +330,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		47DC4CA7261736DD0050C471 /* PictureSMS */ = {
+		47DC4CA7261736DD0050C471 /* PhotoSMS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 47DC4CB7261736DE0050C471 /* Build configuration list for PBXNativeTarget "PictureSMS" */;
+			buildConfigurationList = 47DC4CB7261736DE0050C471 /* Build configuration list for PBXNativeTarget "PhotoSMS" */;
 			buildPhases = (
 				47DC4CA4261736DD0050C471 /* Sources */,
 				47DC4CA5261736DD0050C471 /* Frameworks */,
@@ -206,9 +342,9 @@
 			);
 			dependencies = (
 			);
-			name = PictureSMS;
+			name = PhotoSMS;
 			productName = PictureSMS;
-			productReference = 47DC4CA8261736DD0050C471 /* PictureSMS.app */;
+			productReference = 47DC4CA8261736DD0050C471 /* PhotoSMS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -225,7 +361,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 47DC4CA3261736DD0050C471 /* Build configuration list for PBXProject "PictureSMS" */;
+			buildConfigurationList = 47DC4CA3261736DD0050C471 /* Build configuration list for PBXProject "PhotoSMS" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -238,7 +374,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				47DC4CA7261736DD0050C471 /* PictureSMS */,
+				47DC4CA7261736DD0050C471 /* PhotoSMS */,
 			);
 		};
 /* End PBXProject section */
@@ -248,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475D96C0261B184200AD38A6 /* Launch Screen.storyboard in Resources */,
 				47DC4CB3261736DE0050C471 /* Preview Assets.xcassets in Resources */,
 				47DC4CB0261736DE0050C471 /* Assets.xcassets in Resources */,
 			);
@@ -260,26 +397,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475D96AF261B042800AD38A6 /* GridPreferences.swift in Sources */,
+				475D96A8261B042800AD38A6 /* StaggeredGridStyle.swift in Sources */,
+				475D96A7261B042800AD38A6 /* Grid+Inits.swift in Sources */,
 				475CBDAB26178D06000147C4 /* ContactsPickerView.swift in Sources */,
 				475D9670261ABB2200AD38A6 /* AlertPresenter.swift in Sources */,
 				475CBDA12617871C000147C4 /* SettingsView.swift in Sources */,
+				475D96AA261B042800AD38A6 /* LayoutMath.swift in Sources */,
 				478F00BB261A248600764B46 /* Contact.swift in Sources */,
+				475D96B5261B042800AD38A6 /* Grid.swift in Sources */,
+				475D96B2261B042800AD38A6 /* GridItemBoundsPreferencesKey.swift in Sources */,
 				475D965D261AB85300AD38A6 /* ImageViewer.swift in Sources */,
 				475D9652261A94A600AD38A6 /* UserdefaultManager.swift in Sources */,
+				475D9681261AE9B400AD38A6 /* InboxManager.swift in Sources */,
 				475D9667261ABADF00AD38A6 /* onBoardingPage.swift in Sources */,
+				475D967E261AE88E00AD38A6 /* InboxView.swift in Sources */,
+				475D96B3261B042800AD38A6 /* ModularGridStyle.swift in Sources */,
+				475D9685261AEA0200AD38A6 /* Persistence.swift in Sources */,
+				475D96A9261B042800AD38A6 /* Tracks.swift in Sources */,
+				475D968C261AEC9400AD38A6 /* Message+Ext.swift in Sources */,
+				475D96AD261B042800AD38A6 /* View+GridStyle.swift in Sources */,
 				475D9660261AB9A500AD38A6 /* ActivityView.swift in Sources */,
+				475D96BB261B077100AD38A6 /* MessageItem.swift in Sources */,
 				475CBDA826178A15000147C4 /* MessageComposeView.swift in Sources */,
 				47DC4CAE261736DD0050C471 /* ContentView.swift in Sources */,
+				475D96B4261B042800AD38A6 /* MyGridItem.swift in Sources */,
 				475D966D261ABB0500AD38A6 /* MailComposeView.swift in Sources */,
+				475D9689261AEA4600AD38A6 /* PictureSMS.xcdatamodeld in Sources */,
 				475D9653261A94A600AD38A6 /* SoundManager.swift in Sources */,
 				475CBD9D2617860E000147C4 /* ViewSMSView.swift in Sources */,
+				475D96B1261B042800AD38A6 /* EnvironmentValues+GridStyle.swift in Sources */,
+				475D9691261B00DD00AD38A6 /* ImageViewerView.swift in Sources */,
 				475D9673261ABB5100AD38A6 /* SettingCell.swift in Sources */,
+				475D96AC261B042800AD38A6 /* GridPreferencesKey.swift in Sources */,
 				47DC4CC1261739970050C471 /* ImagePicker.swift in Sources */,
 				475D9659261AB28000AD38A6 /* Camera.swift in Sources */,
 				475D966A261ABADF00AD38A6 /* OnboardingView.swift in Sources */,
 				475D9656261AB1B400AD38A6 /* DocPickerView.swift in Sources */,
+				475D96B0261B042800AD38A6 /* GridPreferencesModifier.swift in Sources */,
 				47DC4CAC261736DD0050C471 /* PictureSMSApp.swift in Sources */,
+				475D96B8261B071100AD38A6 /* InboxCell.swift in Sources */,
+				475D96AB261B042800AD38A6 /* GridStyle.swift in Sources */,
 				475D9668261ABADF00AD38A6 /* EULAView.swift in Sources */,
+				475D96AE261B042800AD38A6 /* GridStyleKey.swift in Sources */,
 				475D9676261ABB5800AD38A6 /* SettingsManager.swift in Sources */,
 				475CBD9A26178604000147C4 /* CreateSMSView.swift in Sources */,
 				47DC4CC6261740F60050C471 /* Extensions.swift in Sources */,
@@ -453,7 +613,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47DC4CA3261736DD0050C471 /* Build configuration list for PBXProject "PictureSMS" */ = {
+		47DC4CA3261736DD0050C471 /* Build configuration list for PBXProject "PhotoSMS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47DC4CB5261736DE0050C471 /* Debug */,
@@ -462,7 +622,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		47DC4CB7261736DE0050C471 /* Build configuration list for PBXNativeTarget "PictureSMS" */ = {
+		47DC4CB7261736DE0050C471 /* Build configuration list for PBXNativeTarget "PhotoSMS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47DC4CB8261736DE0050C471 /* Debug */,
@@ -472,6 +632,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		475D9687261AEA4600AD38A6 /* PictureSMS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				475D9688261AEA4600AD38A6 /* PictureSMS.xcdatamodel */,
+			);
+			currentVersion = 475D9688261AEA4600AD38A6 /* PictureSMS.xcdatamodel */;
+			name = PictureSMS.xcdatamodeld;
+			path = ../../PictureSMS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 47DC4CA0261736DD0050C471 /* Project object */;
 }

@@ -21,11 +21,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>TO DO</string>
+	<string>Your permission is needed to capture an image and attach it at your SMS</string>
 	<key>NSContactsUsageDescription</key>
-	<string>TO DO</string>
+	<string>Your permission is needed to pick the recipients of your outgoing SMS</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>TO DO</string>
+	<string>Your permission is needed to get an image from your library and attach it at your SMS</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

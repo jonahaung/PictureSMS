@@ -14,7 +14,8 @@ struct PictureSMSApp: App {
     @AppStorage(UserdefaultManager.shared._hasShownOnboarding) private var hasShownOnboarding: Bool = UserdefaultManager.shared.hasShownOnboarding
     @AppStorage(UserdefaultManager.shared._doneSetup) private var doneSetup: Bool = UserdefaultManager.shared.doneSetup
     @Environment(\.scenePhase) private var scenePhase
-    let manager = AppManager()
+    private let manager = AppManager()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
@@ -32,13 +33,11 @@ struct PictureSMSApp: App {
         .onChange(of: scenePhase) { phase in
             switch phase {
             case .active:
-                let image = UIPasteboard.general.string?.image
-                manager.recentImage = image
+                manager.update()
             case .inactive:
-                print("inactive")
+                manager.recentImage = nil
             case .background:
-                print("background")
-                
+                break
             @unknown default:
                 print("unknown")
             }
@@ -46,7 +45,3 @@ struct PictureSMSApp: App {
     }
 }
 
-class AppManager: ObservableObject {
- 
-    @Published var recentImage: UIImage?
-}

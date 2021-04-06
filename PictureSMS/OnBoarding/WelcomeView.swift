@@ -32,15 +32,8 @@ struct WelcomeView: View {
                 requestAccess()
             } label: {
                 HStack {
-                    Image(systemName: "camera.fill")
-                        
-                    
                     Text("Allow Usages")
                         .bold()
-                        
-                    Image(systemName: "mic.fill")
-                        
-                    
                 }
                 .foregroundColor(.accentColor)
                 .frame(width: 300, height: 60)

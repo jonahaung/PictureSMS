@@ -61,14 +61,14 @@ struct CreateSMSView: View {
                         AddContactsButton
                     } else {
                         VStack(alignment: .leading, spacing: 8) {
-                            Text("Instructions").underline()
-                            Text("1. Choose the image that you want to send")
-                            Text("2. Add the message recipients (You can add multiple recipients)")
-                            Text("3. Create SMS")
-                            Text("4. Send")
+                            Text("Instructions").font(.title)
+                            Label("Choose the image that you want to send", systemImage: "1.circle.fill")
+                            Label("Add the message recipients (You can add multiple recipients)", systemImage: "2.circle.fill")
+                            Label("Create SMS", systemImage: "3.circle.fill")
+                            Label("Send", systemImage: "4.circle.fill")
                         }
                         .foregroundColor(Color(.tertiaryLabel))
-                        .padding()
+                        .padding(.vertical)
                         Button {
                             sheetManager.showImagePickerSheet = true
                         } label: {
@@ -144,6 +144,14 @@ struct CreateSMSView: View {
                         }
                     }
                     .edgesIgnoringSafeArea(.all)
+                } else {
+                    Text("Message Composing Not Available!")
+                        .font(.title)
+                        .foregroundColor(.secondary)
+                        .padding()
+                        .onTapGesture {
+                            sheetType = nil
+                        }
                 }
             }
         }

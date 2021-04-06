@@ -53,7 +53,7 @@ struct DocPickerView: UIViewControllerRepresentable {
                         url.stopAccessingSecurityScopedResource()
                     }
                 }
-                if let image = UIImage(contentsOfFile: url.path)?.scaledWithMaxWidthOrHeightValue(value: 200) {
+                if let image = UIImage(contentsOfFile: url.path)?.scaledWithMaxWidthOrHeightValue(value: CGFloat(UserdefaultManager.shared.photoQuality)) {
                     parent.onPickImage(image)
                     parent.presentationMode.wrappedValue.dismiss()
                 }

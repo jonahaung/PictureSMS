@@ -16,6 +16,7 @@ class UserdefaultManager {
     let _doneSetup = "doneSetup"
     let _offShutterSound = "playShutterSound"
     let _fontDesign = "fontDesign"
+    let _photoQuality = "photoQuality"
 
     var fontDesign: FontDesign {
         get {
@@ -34,6 +35,20 @@ class UserdefaultManager {
     var doneSetup: Bool {
         get { return manager.bool(forKey: _doneSetup) }
         set { manager.setValue(newValue, forKey: _doneSetup) }
+    }
+    
+    var photoQuality: Int {
+        get {
+            var x = manager.integer(forKey: _photoQuality)
+            if x == 0 {
+                x = 200
+                manager.setValue(x, forKey: _photoQuality)
+            }
+            return x
+        }
+        set {
+            manager.setValue(newValue, forKey: _photoQuality)
+        }
     }
 }
 

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		475CBD9A26178604000147C4 /* CreateSMSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBD9926178604000147C4 /* CreateSMSView.swift */; };
-		475CBD9D2617860E000147C4 /* ViewSMSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBD9C2617860E000147C4 /* ViewSMSView.swift */; };
 		475CBDA12617871C000147C4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBDA02617871C000147C4 /* SettingsView.swift */; };
 		475CBDA826178A15000147C4 /* MessageComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBDA726178A15000147C4 /* MessageComposeView.swift */; };
 		475CBDAB26178D06000147C4 /* ContactsPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475CBDAA26178D06000147C4 /* ContactsPickerView.swift */; };
@@ -51,6 +50,7 @@
 		475D96BB261B077100AD38A6 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475D96BA261B077100AD38A6 /* MessageItem.swift */; };
 		475D96C0261B184200AD38A6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 475D96BF261B184200AD38A6 /* Launch Screen.storyboard */; };
 		478F00BB261A248600764B46 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F00BA261A248600764B46 /* Contact.swift */; };
+		47A9C308261C49FD002B9499 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A9C307261C49FD002B9499 /* AppManager.swift */; };
 		47AC9262261B8AC20091D905 /* InstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AC9261261B8AC10091D905 /* InstructionsView.swift */; };
 		47DC4CAC261736DD0050C471 /* PictureSMSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4CAB261736DD0050C471 /* PictureSMSApp.swift */; };
 		47DC4CAE261736DD0050C471 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DC4CAD261736DD0050C471 /* ContentView.swift */; };
@@ -62,7 +62,6 @@
 
 /* Begin PBXFileReference section */
 		475CBD9926178604000147C4 /* CreateSMSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateSMSView.swift; sourceTree = "<group>"; };
-		475CBD9C2617860E000147C4 /* ViewSMSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSMSView.swift; sourceTree = "<group>"; };
 		475CBDA02617871C000147C4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		475CBDA726178A15000147C4 /* MessageComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposeView.swift; sourceTree = "<group>"; };
 		475CBDAA26178D06000147C4 /* ContactsPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPickerView.swift; sourceTree = "<group>"; };
@@ -105,6 +104,7 @@
 		475D96BA261B077100AD38A6 /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
 		475D96BF261B184200AD38A6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		478F00BA261A248600764B46 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		47A9C307261C49FD002B9499 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		47AC9261261B8AC10091D905 /* InstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsView.swift; sourceTree = "<group>"; };
 		47DC4CA8261736DD0050C471 /* PhotoSMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoSMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DC4CAB261736DD0050C471 /* PictureSMSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureSMSApp.swift; sourceTree = "<group>"; };
@@ -145,14 +145,6 @@
 				478F00B9261A246E00764B46 /* Models */,
 			);
 			path = CreateSMS;
-			sourceTree = "<group>";
-		};
-		475CBDA526178732000147C4 /* ViewSMS */ = {
-			isa = PBXGroup;
-			children = (
-				475CBD9C2617860E000147C4 /* ViewSMSView.swift */,
-			);
-			path = ViewSMS;
 			sourceTree = "<group>";
 		};
 		475D9662261ABADF00AD38A6 /* OnBoarding */ = {
@@ -257,6 +249,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		47A9C306261C49F0002B9499 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				47A9C307261C49FD002B9499 /* AppManager.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		47DC4C9F261736DD0050C471 = {
 			isa = PBXGroup;
 			children = (
@@ -278,11 +278,11 @@
 			children = (
 				47DC4CAB261736DD0050C471 /* PictureSMSApp.swift */,
 				47DC4CAD261736DD0050C471 /* ContentView.swift */,
+				47A9C306261C49F0002B9499 /* Classes */,
 				475D968F261B00B400AD38A6 /* ImageViewer */,
 				475D967C261AE87C00AD38A6 /* Inbox */,
 				475D9662261ABADF00AD38A6 /* OnBoarding */,
 				475CBDA326178729000147C4 /* CreateSMS */,
-				475CBDA526178732000147C4 /* ViewSMS */,
 				475CBD9F2617870F000147C4 /* Settings */,
 				47DC4CC4261740E70050C471 /* Helpers */,
 				47DC4CBB2617389D0050C471 /* Pickers */,
@@ -429,7 +429,6 @@
 				475D966D261ABB0500AD38A6 /* MailComposeView.swift in Sources */,
 				475D9689261AEA4600AD38A6 /* PictureSMS.xcdatamodeld in Sources */,
 				475D9653261A94A600AD38A6 /* SoundManager.swift in Sources */,
-				475CBD9D2617860E000147C4 /* ViewSMSView.swift in Sources */,
 				475D96B1261B042800AD38A6 /* EnvironmentValues+GridStyle.swift in Sources */,
 				475D9691261B00DD00AD38A6 /* ImageViewerView.swift in Sources */,
 				475D9673261ABB5100AD38A6 /* SettingCell.swift in Sources */,
@@ -440,6 +439,7 @@
 				475D9656261AB1B400AD38A6 /* DocPickerView.swift in Sources */,
 				475D96B0261B042800AD38A6 /* GridPreferencesModifier.swift in Sources */,
 				47DC4CAC261736DD0050C471 /* PictureSMSApp.swift in Sources */,
+				47A9C308261C49FD002B9499 /* AppManager.swift in Sources */,
 				475D96B8261B071100AD38A6 /* InboxCell.swift in Sources */,
 				475D96AB261B042800AD38A6 /* GridStyle.swift in Sources */,
 				475D9668261ABADF00AD38A6 /* EULAView.swift in Sources */,

@@ -24,7 +24,7 @@ struct ImagePicker: UIViewControllerRepresentable {
         }
         
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let image = (info[.originalImage] as? UIImage)?.scaledWithMaxWidthOrHeightValue(value: 200) {
+            if let image = (info[.originalImage] as? UIImage)?.scaledWithMaxWidthOrHeightValue(value: CGFloat(UserdefaultManager.shared.photoQuality)) {
                 parent.onPickImage(image)
             }
             picker.dismiss(animated: true)

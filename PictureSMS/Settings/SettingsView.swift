@@ -8,6 +8,7 @@
 import SwiftUI
 import AVFoundation
 import MessageUI
+import Foundation
 
 private enum PresentViewType: Identifiable {
     var id: PresentViewType { return self }
@@ -21,10 +22,17 @@ struct SettingsView: View {
     
     @AppStorage(UserdefaultManager.shared._fontDesign) private var fontDesignIndex: Int = UserdefaultManager.shared.fontDesign.rawValue
     
+    @AppStorage(UserdefaultManager.shared._photoQuality) private var imageQuality: Int = UserdefaultManager.shared.photoQuality
     
     var body: some View {
         Form {
-            
+            Section(header: Text("SMS Settings").foregroundColor(Color(.tertiaryLabel))) {
+                Picker(selection: $imageQuality, label: Text("Image Quality")) {
+                    Text("Speed (Low)").tag(100)
+                    Text("Normal").tag(200)
+                    Text("Quality (Slow)").tag(300)
+                }
+            }
             Section(header: Text("Device Settings").foregroundColor(Color(.tertiaryLabel))) {
                 
                 Picker(selection: $fontDesignIndex, label: Text("Font Design")) {
@@ -32,7 +40,6 @@ struct SettingsView: View {
                     Text(FontDesign.monoSpaced.name).tag(FontDesign.monoSpaced.rawValue)
                     Text(FontDesign.serif.name).tag(FontDesign.serif.rawValue)
                 }
-                
                 Button(action: {
                     UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
                 }) {
@@ -51,7 +58,7 @@ struct SettingsView: View {
                 Button(action: {
                     presentViewType = .instructionsView
                 }) {
-                    SettingCell(text: "How to use the app", subtitle: nil, imageName: "greetingcard")
+                    SettingCell(text: "Guide", subtitle: "video", imageName: "megaphone")
                 }
                 Button(action: {
                     presentViewType = .eulaView
